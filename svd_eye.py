@@ -31,10 +31,10 @@ ax = plt.subplot(1, 3, 3)
 sns.heatmap(eye2, ax=ax)
 ax.set_title("U @ S @ Vh")
 
-fname = "svd_eye.png"
+fname = "out/svd_eye.png"
 try:
 	if os.environ["MKL_NUM_THREADS"] == "1":
-		fname = "svd_eye_1thread.png"
+		fname = "out/svd_eye_1thread.png"
 except KeyError:
 	pass
 plt.savefig(fname)
